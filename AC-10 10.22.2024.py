@@ -1,3 +1,5 @@
+####### Prototype Results were generated with this code
+    ### The number of epochs was what changed for the three outputs
 import random
 import numpy as np
 import matplotlib.pyplot as plt
