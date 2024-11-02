@@ -1,5 +1,11 @@
+import os
 import mido
 from mido import MidiFile, MidiTrack, Message
+
+# Create a folder named 'scales_midi_files' to save the MIDI files
+output_folder = 'scales'
+os.makedirs(output_folder, exist_ok=True)
+
 
 def create_scale_midi(notes, filename):
     midi = MidiFile()
@@ -42,5 +48,5 @@ scales = {
 }
 
 for scale_name, notes in scales.items():
-    create_scale_midi(notes, f'{scale_name}.mid')
+    create_scale_midi(notes, os.path.join(output_folder, f'{scale_name}.mid'))
 
